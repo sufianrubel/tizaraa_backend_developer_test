@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        $perPage = (int) request()->query('per_page', 15);
+        $perPage = (int) request()->query('per_page', 2);
         $search = request()->query('search');
 
         $query = Product::query();
